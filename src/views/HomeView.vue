@@ -86,7 +86,7 @@ export default {
           I aim to create digital experiences and solutions that are innovative, problem-focused, and valuable to the
           end user.
         </h1>
-        <a href="/src/img/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
+        <a href="/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
       </div>
       <div class="contact-icons-container" style="">
         <a href="https://github.com/MustafaBaban" target="_blank">
