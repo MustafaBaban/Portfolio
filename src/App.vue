@@ -68,7 +68,7 @@ footer {
 
 
 p{
-  font-weight: 400 !important;
+  font-weight: 600 !important;
 }
 body {
   margin: 0;

@@ -17,8 +17,15 @@ export default {
     }
   },
   methods: {
-
-
+    copyText(text) {
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          console.log('Text copied to clipboard');
+        })
+        .catch((error) => {
+          console.error('Failed to copy text: ', error);
+        });
+    },
     disableScroll() {
       let disableScroll = function (e) {
         e.preventDefault();
@@ -81,22 +88,22 @@ export default {
         <button class="callToSecondAction">Resume</button>
       </div>
       <div class="contact-icons-container" style="">
-        <a href="#">
+        <a href="https://github.com/MustafaBaban" target="_blank">
           <img class="contact-icon" src="../img/github.svg" alt="github icon">
         </a>
-        <a href="#">
+        <a href="https://www.behance.net/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/behance.svg" alt="behance icon">
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/linkedin.svg" alt="linkedin icon">
         </a>
-        <a href="#">
+        <a href="#" @click="copyText('+9647701032485')" target="_blank">
           <img class="contact-icon" src="../img/whatsapp.svg" alt="whatsapp icon">
         </a>
-        <a href="#">
+        <a href="https://instagram.com/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/instagram.svg" alt="instagram icon">
         </a>
-        <a href="#">
+        <a href="https://t.me/MstfaBaban" target="_blank">
           <img class="contact-icon" src="../img/telegram.svg" alt="telegram icon">
         </a>
       </div>
@@ -128,7 +135,7 @@ export default {
 
     .contact-icons-container {
       width: 100%;
-      padding: 2em;
+      // padding: 2em;
       display: flex;
       justify-content: center;
 
@@ -138,9 +145,12 @@ export default {
 
       .contact-icon {
         // padding:1em;
-        margin-right: 2em;
+        // margin-right: 2em;
         width: 32px;
         height: 32px;
+        margin-left: .7em;
+        margin-right: .7em;
+        margin-bottom: 1.5em;
 
         @include breakpoint($sm) {
           margin-right: 2em;
@@ -305,7 +315,7 @@ export default {
         .logo {
           font-family: $font-second;
           font-size: 3rem;
-          font-weight: 400;
+          font-weight: 600;
           font-size: 4em;
           width: 70%;
 
@@ -326,7 +336,7 @@ export default {
         .sub-logo {
           font-family: $font-second;
           font-size: 1.6em;
-          font-weight: 400;
+          font-weight: 500;
           margin-top: .5em;
         }
       }

@@ -18,6 +18,16 @@ export default {
     loading, modal
   },
   methods: {
+    copyText(text) {
+     
+     navigator.clipboard.writeText(text)
+       .then(() => {
+         console.log('Text copied to clipboard');
+       })
+       .catch((error) => {
+         console.error('Failed to copy text: ', error);
+       });
+   },
     sendEmail(e) {
       e.preventDefault();
       this.loading = true;
@@ -62,26 +72,29 @@ export default {
 
     <div class="footer">
       <div class="name">
-        <h3>mail@mstfa.me</h3>
+        <div style="display:flex;cursor: pointer;" @click="copyText('mail@mstfa.me')">
+            <img src="../img/email.svg" style="margin-right:1em;" alt=""> 
+            <h3 > mail@mstfa.me</h3>
+          </div>
         <h1>Mustafa Baban</h1>
       </div>
       <div class="contact-icons-container" style="">
-        <a href="#">
+        <a href="https://github.com/MustafaBaban" target="_blank">
           <img class="contact-icon" src="../img/github.svg" alt="github icon">
         </a>
-        <a href="#">
+        <a href="https://www.behance.net/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/behance.svg" alt="behance icon">
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/linkedin.svg" alt="linkedin icon">
         </a>
-        <a href="#">
+        <a href="#" @click="copyText('+9647701032485')" target="_blank">
           <img class="contact-icon" src="../img/whatsapp.svg" alt="whatsapp icon">
         </a>
-        <a href="#">
+        <a href="https://instagram.com/mstfababan" target="_blank">
           <img class="contact-icon" src="../img/instagram.svg" alt="instagram icon">
         </a>
-        <a href="#">
+        <a href="https://t.me/MstfaBaban" target="_blank">
           <img class="contact-icon" src="../img/telegram.svg" alt="telegram icon">
         </a>
       </div>
@@ -204,6 +217,7 @@ export default {
     }
     
     h3 {
+      cursor: pointer;
       // margin-top: 1rem;
       margin-bottom: 15px;
 

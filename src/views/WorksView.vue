@@ -6,10 +6,11 @@ export default {
     },
     data() {
         return {
-//f
+            //f
             works: [
                 {
                     status: false,
+                    hasModal: true,
                     title: 'Dynamic JSON Form Builder',
                     category: 'Development',
                     description: `In this project, I created a dynamic form builder using Laravel and Vue.js to
@@ -71,6 +72,21 @@ export default {
                 },
                 {
                     status: false,
+                    hasModal: false,
+                    title: `Landscaping company design identity`,
+                    category: 'Design',
+                    description: ` This project revitalizes a landscaping company's
+                     brand identity by replacing the outdated design with a striking, 
+                     modern look. The new branding focuses on contemporary icons and design 
+                     elements that reflect the company's values and expertise. Experience the
+                      transformation and impact of modern design through this impressive brand makeover.`,
+                    content: ``,
+                    img: "src/img/prunus.png",
+                    url: "https://www.behance.net/gallery/121209387/Brand-logo/"
+                },
+                {
+                    status: false,
+                    hasModal: false,
                     title: 'Repeatedly',
                     category: 'Design and Development',
                     description: `This fun web app allows users to easily set their
@@ -86,6 +102,7 @@ export default {
                 },
                 {
                     status: false,
+                    hasModal: false,
                     title: `Centre français de recherche sur l'Irak`,
                     category: 'Design and Development',
                     description: `The Centre français de recherche sur l'Irak is a
@@ -101,6 +118,7 @@ export default {
                 },
                 {
                     status: false,
+                    hasModal: false,
                     title: `Contacts Page`,
                     category: 'Design and Development',
                     description: `A user-friendly Page, designed specifically to consolidate all of the architect's 
@@ -111,6 +129,7 @@ export default {
                 },
                 {
                     status: false,
+                    hasModal: false,
                     title: `Flower shop`,
                     category: 'Design and Development',
                     description: `This website showcases an elegant digital presence for a local flower shop. With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
@@ -120,6 +139,7 @@ export default {
                 },
                 {
                     status: false,
+                    hasModal: false,
                     title: `Old Portfolio`,
                     category: 'Design and Development',
                     description: ` This project features a previous personal portfolio that embraces
@@ -132,19 +152,7 @@ export default {
                     img: "src/img/portfolio.svg",
                     url: "https://www.behance.net/gallery/120466971/Personal-brand-and-portfolio"
                 },
-                {
-                    status: false,
-                    title: `Landscaping company design identity`,
-                    category: 'Design',
-                    description: ` This project revitalizes a landscaping company's
-                     brand identity by replacing the outdated design with a striking, 
-                     modern look. The new branding focuses on contemporary icons and design 
-                     elements that reflect the company's values and expertise. Experience the
-                      transformation and impact of modern design through this impressive brand makeover.`,
-                    content: ``,
-                    img: "src/img/prunus.png",
-                    url: "https://www.behance.net/gallery/121209387/Brand-logo/"
-                },
+
                 // Add more projects as needed
             ],
         }
@@ -179,8 +187,8 @@ export default {
 
                 <!-- umniah.netlify.app -->
                 <!-- https://akramiraq.netlify.app/ -->
-                <a class="callToSecondAction" style="text-decoration: none;" target="_blank" :href="work.url">Visit link</a>
-                <!-- <button class="callToSecondAction" @click="work.status = true">Learn More</button> -->
+                <a class="callToSecondAction" style="text-decoration: none;margin-right:.5em" target="_blank" :href="work.url">Visit link</a>
+                <a class="callToSecondAction" v-if="work.hasModal" @click="work.status = true">Learn More</a>
             </div>
         </div>
 
@@ -197,7 +205,7 @@ export default {
     padding-right: 0;
     flex-basis: 50%;
 
-    
+
     .title {
         font-size: 4em;
         margin-left: 30px;
@@ -214,7 +222,7 @@ export default {
         border: solid rgb(105, 105, 105) 1px;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         margin-bottom: 4em;
-        overflow-x:hidden;
+        overflow-x: hidden;
         flex-direction: column;
         margin-left: 15px;
         margin-right: 15px;
@@ -227,43 +235,46 @@ export default {
             // margin-left: 60px;
             // margin-right: 60px;
             margin-left: 30px;
-        margin-right: 30px;
+            margin-right: 30px;
         }
 
         @include breakpoint($md) {
             // margin-right: 180px;
- 
+
             flex-basis: 50%;
             flex-direction: row;
             // width: 80%;
         }
-        
+
         @include breakpoint($lg) {
             margin-right: 180px;
             // width: 80%;
-            
+
         }
-        
+
         @include breakpoint($xl) {
             width: 70%;
         }
-        
+
         .text-content {
             padding: 3em;
             // padding-bottom: 2em;
             width: 100%;
+
             @include breakpoint($md) {
                 width: 50%;
             }
-            
+
         }
 
-        p{
+        p {
             font-size: 1.3em !important;
+
             @include breakpoint($lg) {
                 font-size: 1.5em !important;
             }
         }
+
         div {
             place-self: center;
             // margin-left: 5%;
@@ -285,7 +296,7 @@ export default {
             }
 
             img {
-                padding:6em;
+                padding: 6em;
                 object-fit: cover;
                 width: 100%;
                 max-width: 370px;
@@ -335,5 +346,4 @@ export default {
         }
 
     }
-}
-</style>
+}</style>
