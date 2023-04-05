@@ -1,0 +1,23 @@
+$white : #ddd;
+$black: #333;
+$accent:#cb0505    ;
+$font-main: "Typewriter",
+  sans-serif;
+$font-second: "Typewriter",
+  sans-serif;
+
+  
+  @mixin breakpoint($size) {
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
+  
+  // Define your breakpoints as variables
+  $xs: 0px;
+  $sm: 576px;
+  $md: 768px;
+  $lg: 992px;
+  $xl: 1200px;
+  $xxl: 1400px;
+  
