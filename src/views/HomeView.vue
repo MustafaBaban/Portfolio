@@ -80,10 +80,30 @@ export default {
         </h1>
         <button class="callToSecondAction">Resume</button>
       </div>
+      <div class="contact-icons-container" style="">
+        <a href="#">
+          <img class="contact-icon" src="../img/github.svg" alt="github icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/behance.svg" alt="behance icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/linkedin.svg" alt="linkedin icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/whatsapp.svg" alt="whatsapp icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/instagram.svg" alt="instagram icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/telegram.svg" alt="telegram icon">
+        </a>
+      </div>
     </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" >
 .border {
   margin-left: 50%;
   margin-right: 50px;
@@ -105,6 +125,31 @@ export default {
     position: relative;
     display: flex;
     flex-direction: column;
+
+    .contact-icons-container {
+      width: 100%;
+      padding: 2em;
+      display: flex;
+      justify-content: center;
+
+      @include breakpoint($md) {
+        justify-content: flex-end;
+      }
+
+      .contact-icon {
+        // padding:1em;
+        margin-right: 2em;
+        width: 32px;
+        height: 32px;
+
+        @include breakpoint($sm) {
+          margin-right: 2em;
+          width: 56px;
+          height: 56px;
+        }
+
+      }
+    }
 
     .nav {
       -webkit-touch-callout: none;
@@ -352,5 +397,6 @@ export default {
     }
 
   }
-}</style>
+}
+</style>
 

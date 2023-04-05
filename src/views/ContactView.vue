@@ -50,19 +50,40 @@ export default {
       <!-- <p slot="body">{{modal.body}}</p> -->
     </modal>
 
-    <form action="" class="inputs" ref="form" @submit.prevent="sendEmail">
-      <div class="mail">
-        <input type="text" placeholder="Name" name="from_name" class="input" />
-        <input type="email" placeholder="Email" name="email" class="input" />
-        <textarea placeholder="Message" name="message" class="input" id="" cols="30" rows="10"></textarea>
-        <button class="callToAction" type="submit">Send</button>
-      </div>
-    </form>
+  <form action="" class="inputs" ref="form" @submit.prevent="sendEmail">
+    <div class="mail">
+      <input type="text" placeholder="Name" name="from_name" class="input" />
+      <input type="email" placeholder="Email" name="email" class="input" />
+      <textarea placeholder="Message" name="message" class="input" id="" cols="30" rows="10"></textarea>
+      <button class="callToAction" type="submit">Send</button>
+    </div>
+  </form>
+
 
     <div class="footer">
-      <div>
+      <div class="name">
+        <h3>mail@mstfa.me</h3>
         <h1>Mustafa Baban</h1>
-        <h3>mstfababan@gmail.com</h3>
+      </div>
+      <div class="contact-icons-container" style="">
+        <a href="#">
+          <img class="contact-icon" src="../img/github.svg" alt="github icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/behance.svg" alt="behance icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/linkedin.svg" alt="linkedin icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/whatsapp.svg" alt="whatsapp icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/instagram.svg" alt="instagram icon">
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../img/telegram.svg" alt="telegram icon">
+        </a>
       </div>
     </div>
 
@@ -71,6 +92,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
 .right-page {
   width: 100vw;
 
@@ -88,15 +110,15 @@ export default {
 
     @include breakpoint($md) {
 
-      margin-left: 60px;
-      margin-right: 60px;
+      // margin-left: 60px;
+      // margin-right: 60px;
     }
 
   }
 }
 
 .inputs {
-
+  margin-top:6rem;
   margin-left: 30px;
   margin-right: 30px;
 
@@ -147,34 +169,84 @@ export default {
 
 .footer {
   position: absolute;
-  bottom: 0;
   display: flex;
+  bottom:0px;
   flex-direction: column;
   color: $black;
-  // justify-content: space-between;
   width: 100%;
-  margin-bottom: 2rem;
-
-  margin-left: 30px;
-
+  margin-bottom: 30px;
+  // height: 100%;
+  // margin-bottom: 2rem;
+  // margin-left: 30px;
+  text-align: center;
+  
   @include breakpoint($md) {
-    align-items: flex-end;
+    margin-bottom:30px;
+    flex-direction: row;
+    text-align: left;
+
+    // align-items: flex-end;
     // margin-right: 60px;
   }
-
-  h1 {
-    font-size: 2rem;
-    margin-right:1em;
+  .name{
+    width: 100%;
     @include breakpoint($md) {
-      font-size: 3rem;
+      margin-left: 30px;
     }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      // margin-right:1em;
+      @include breakpoint($md) {
+        margin-bottom: 0;
+        font-size: 3rem;
+      }
+    }
+    
+    h3 {
+      // margin-top: 1rem;
+      margin-bottom: 15px;
+
+      font-size: 1rem;
+      color: lighten($black, 30%);
+      @include breakpoint($md) {
+        margin-bottom: 0;
+      }
+    }
+
   }
 
-  h3 {
-    margin-top: 1rem;
-    font-size: 1rem;
-    color: lighten($black, 50%);
-  }
+  .contact-icons-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      @include breakpoint($md) {
+        margin-right:30px;
+        justify-content: flex-end;
+      }
+      a{
+        align-self: flex-end;
+      }
+      .contact-icon {
+        // padding:1em;
+        margin-left: 1em;
+        margin-right: 1em;
+        width: 32px;
+        height: 32px;
+
+        @include breakpoint($sm) {
+          // margin-right: 2em;
+          width: 56px;
+          height: 56px;
+        }
+        @include breakpoint($md) {
+    
+          width: 48px;
+          height: 48px;
+        }
+
+      }
+    }
 }
 
 
