@@ -13,17 +13,18 @@ export default {
   data() {
     return {
       currentAnimation: 'moveUp',
-      menuStatus: true
+      menuStatus: true,
     }
   },
   methods: {
     copyText(text) {
       navigator.clipboard.writeText(text)
         .then(() => {
-          console.log('Text copied to clipboard');
+          alert('Text copied to clipboard');
+
         })
         .catch((error) => {
-          console.error('Failed to copy text: ', error);
+          alert('Failed to copy text: ', error);
         });
     },
     disableScroll() {
@@ -85,7 +86,7 @@ export default {
           I aim to create digital experiences and solutions that are innovative, problem-focused, and valuable to the
           end user.
         </h1>
-        <button class="callToSecondAction">Resume</button>
+        <a href="/src/img/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
       </div>
       <div class="contact-icons-container" style="">
         <a href="https://github.com/MustafaBaban" target="_blank">

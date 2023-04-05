@@ -1,5 +1,13 @@
 <script>
 import ProjectDetail from '../components/ProjectDetail.vue'
+import akram from '../img/akram.png'
+import umniah from '../img/umniah.png'
+import FormMaker from '../img/FormMaker.svg'
+import prunus from '../img/prunus.png'
+import repeatedly from '../img/repeatedly.svg'
+import portfolio from '../img/portfolio.svg'
+import cfri from '../img/cfri.png'
+
 export default {
     components: {
         ProjectDetail
@@ -67,7 +75,7 @@ export default {
                     <footer >
                         <div style="font-size:4em">Thank you for Viewing</div>
                     </footer>`,
-                    img: "src/img/FormMaker.svg",
+                    img: FormMaker,
                     url: "https://formmaker.mstfa.me"
                 },
                 {
@@ -81,7 +89,7 @@ export default {
                      elements that reflect the company's values and expertise. Experience the
                       transformation and impact of modern design through this impressive brand makeover.`,
                     content: ``,
-                    img: "src/img/prunus.png",
+                    img: prunus,
                     url: "https://www.behance.net/gallery/121209387/Brand-logo/"
                 },
                 {
@@ -97,7 +105,7 @@ export default {
                         studying, or just need some background noise, Repeatedly keeps your
                         favorite content playing on loop.`,
                     content: ``,
-                    img: "src/img/repeatedly.svg",
+                    img: repeatedly,
                     url: "https://repeatedly.netlify.app/"
                 },
                 {
@@ -113,7 +121,7 @@ export default {
                          of Iraqi and Kurdish affairs while staying updated on Franco-Iraqi relations
                           through this informative and accessible platform`,
                     content: ``,
-                    img: "src/img/cfri.png",
+                    img: cfri,
                     url: "https://cfri-irak.com/"
                 },
                 {
@@ -124,7 +132,7 @@ export default {
                     description: `A user-friendly Page, designed specifically to consolidate all of the architect's 
                     contact information, social media handles, and online presence in one accessible location.`,
                     content: ``,
-                    img: "src/img/akram.png",
+                    img: akram,
                     url: "https://akramiraq.netlify.app/"
                 },
                 {
@@ -134,7 +142,7 @@ export default {
                     category: 'Design and Development',
                     description: `This website showcases an elegant digital presence for a local flower shop. With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
                     content: ``,
-                    img: "src/img/umniah.png",
+                    img: umniah,
                     url: "https://umniah.netlify.app/"
                 },
                 {
@@ -149,7 +157,7 @@ export default {
                     color palette allows the content to take center stage, presenting a timeless
                     representation of the creator's skills and achievements.`,
                     content: ``,
-                    img: "src/img/portfolio.svg",
+                    img: portfolio,
                     url: "https://www.behance.net/gallery/120466971/Personal-brand-and-portfolio"
                 },
 
