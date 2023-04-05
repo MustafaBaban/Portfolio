@@ -74,7 +74,7 @@ export default {
       <div class="name">
         <!-- <div style="display:flex;cursor: pointer;" @click="copyText('mail@mstfa.me')"> -->
             <!-- <img src="../img/email.svg" style="margin-right:1em;" alt="">  -->
-            <h3 > mail@mstfa.me</h3>
+            <h3 @click="copyText('mail@mstfa.me')" > mail@mstfa.me</h3>
           <!-- </div> -->
         <h1>Mustafa Baban</h1>
       </div>
@@ -187,7 +187,7 @@ export default {
   flex-direction: column;
   color: $black;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   // height: 100%;
   // margin-bottom: 2rem;
   // margin-left: 30px;
@@ -203,12 +203,13 @@ export default {
   }
   .name{
     width: 100%;
+    // margin-left: 15px;
     @include breakpoint($md) {
       margin-left: 30px;
     }
     h1 {
       font-size: 2rem;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       // margin-right:1em;
       @include breakpoint($md) {
         margin-bottom: 0;
@@ -219,7 +220,7 @@ export default {
     h3 {
       cursor: pointer;
       // margin-top: 1rem;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
 
       font-size: 1rem;
       color: lighten($black, 30%);

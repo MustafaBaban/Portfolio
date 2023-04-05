@@ -49,9 +49,9 @@ export default {
                             </p>
                             <!-- <img class="DetailsImage" src="/src/img/FormMaker1.PNG"
                                 alt="Step one of Making the form's parent" /> -->
-                            <img class="DetailsImage" src="/src/img/FormMaker2.PNG"
+                            <img class="DetailsImage" src="/FormMaker2.PNG"
                                 alt="Step two of Making the form's parent" />
-                            <img class="DetailsImage" src="/src/img/FormMaker3.PNG"
+                            <img class="DetailsImage" src="/FormMaker3.PNG"
                                 alt="Showing the final example of the created form" />
                             <!-- <img class="DetailsImage" src="/src/img/FormMaker4.PNG"
                                 alt="Showing the post request of the form to the specified URL" />
@@ -140,7 +140,8 @@ export default {
                     hasModal: false,
                     title: `Flower shop`,
                     category: 'Design and Development',
-                    description: `This website showcases an elegant digital presence for a local flower shop. With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
+                    description: `This website showcases an elegant digital presence for a local flower shop.
+                     With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
                     content: ``,
                     img: umniah,
                     url: "https://umniah.netlify.app/"

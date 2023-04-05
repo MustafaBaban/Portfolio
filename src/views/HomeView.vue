@@ -155,6 +155,10 @@ export default {
 
         @include breakpoint($sm) {
           margin-right: 2em;
+          width: 48px;
+          height: 48px;
+        }
+        @include breakpoint($md) {
           width: 56px;
           height: 56px;
         }
@@ -392,7 +396,7 @@ export default {
 
       }
 
-      button {
+      .callToSecondAction {
         align-self: center;
 
         @include breakpoint($sm) {
