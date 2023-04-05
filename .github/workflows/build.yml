@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x, 18.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -21,3 +21,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build 
+
+      - name: Push build to build branch
+        uses: EndBug/add-and-commit@v7
+        with:
+          branch: build
+          message: "Update build"
+          add: "dist/*"  
