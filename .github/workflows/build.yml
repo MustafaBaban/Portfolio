@@ -28,3 +28,4 @@ jobs:
           github_token: ${{ secrets.MY_SECRET }}
           publish_dir: ./dist
           publish_branch: build
+          # test
