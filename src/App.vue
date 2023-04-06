@@ -14,9 +14,9 @@ export default {
 }
 </script>
 <template>
-
- <HomeView/>
+  <HomeView/>
   <div class="bottom-pages">
+    <h1>Hello World</h1>
     <WorksView/>
     <ContactView/>
     <!-- <loading/> -->
