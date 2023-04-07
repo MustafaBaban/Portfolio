@@ -277,6 +277,7 @@ export default {
       .box {
         position: absolute;
         z-index: 100;
+        transform: translate(-1px, -1px);
         // width: 100%;
         // height: 100%;
         background-color: $black;

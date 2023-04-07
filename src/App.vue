@@ -18,8 +18,6 @@ export default {
   <div class="bottom-pages">
     <WorksView/>
     <ContactView/>
-    <!-- <loading/> -->
-    
   </div>
 
 </template>
