@@ -176,7 +176,7 @@ export default {
 </script>
 
 <template>
-    <div class="works scrollable" id="works">
+    <div class="works scrollable" id="works" >
         <p class="title">Works</p>
         <div class="work" v-for="work in works">
             <!-- <div class="work"> -->
@@ -208,9 +208,9 @@ export default {
 <style lang="scss" scoped>
 .works {
     width: 100%;
-    overscroll-behavior-y: none;
     height: 100%;
     overflow-y: scroll;
+    overscroll-behavior-y: none;
     padding-right: 0;
     flex-basis: 50%;
 

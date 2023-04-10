@@ -6,8 +6,7 @@
 
                
                     <div class="close-button" @click="close()">
-                            <div class="bar1"></div>
-                            <div class="bar2"></div>
+                        X
                         </div>
 
                     <div class="modal-body">
@@ -46,28 +45,11 @@ export default {
 <style scoped>
 .close-button {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 10px;
-    /* margin-left: auto; */
-    width: 20px;
-    height: 20px;
+    font-size: 20px; /* added font-size to control the size of the X */
+    font-weight: bold; /* added font-weight to make the X bolder */
     cursor: pointer;
-}
-
-.bar1,
-.bar2 {
-    position: absolute;
-    width: 15px;
-    height: 2px;
-    background-color: black;
-}
-
-.bar1 {
-    transform: rotate(45deg);
-}
-
-.bar2 {
-    transform: rotate(-45deg);
 }
 
 .modal-mask {
