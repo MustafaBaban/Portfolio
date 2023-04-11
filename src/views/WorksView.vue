@@ -221,9 +221,10 @@ export default {
         font-size: 4em;
         margin-left: 30px;
         margin-top: 30px;
-        margin-bottom: 1em;
-
+        margin-bottom: 2em;
+        
         @include breakpoint($sm) {
+            margin-bottom: 1em;
             font-size: 7em;
         }
     }
