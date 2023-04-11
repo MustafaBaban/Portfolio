@@ -176,7 +176,7 @@ export default {
 </script>
 
 <template>
-    <div class="works scrollable" id="works" >
+    <div class="works" id="works" >
         <p class="title">Works</p>
         <div class="work" v-for="work in works">
             <!-- <div class="work"> -->
@@ -197,7 +197,8 @@ export default {
                 <!-- umniah.netlify.app -->
                 <!-- https://akramiraq.netlify.app/ -->
                 <a class="callToSecondAction" style="text-decoration: none;margin-right:.5em" target="_blank" :href="work.url">Visit link</a>
-                <a class="callToSecondAction" v-if="work.hasModal" @click="work.status = true">Learn More</a>
+                
+                <button class="callToSecondAction" v-if="work.hasModal" @click="work.status = true" style="font-weight:bold;margin-top:.7em;">Learn More</button>
             </div>
         </div>
 

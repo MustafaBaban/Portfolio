@@ -27,6 +27,8 @@ export default {
           alert('Failed to copy text: ', error);
         });
     },
+  
+  
   },
 }
 </script>
@@ -80,6 +82,7 @@ export default {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  overflow-x: scroll;
 
   @include breakpoint($sm) {
     padding: 30px;

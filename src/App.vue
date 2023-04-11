@@ -15,6 +15,7 @@ export default {
     HomeView, WorksView, ContactView, loading
   },
   mounted() {
+    // this.$refs.worksView.$el.addEventListener("touchmove", this.handleScroll); TODO: add touch support
     this.$refs.worksView.$el.addEventListener("wheel", this.handleScroll);
     this.$refs.contactView.$el.addEventListener("wheel", this.handleScrollContact);
     this.$refs.homeView.$el.addEventListener("wheel", this.handleScrollHome);
@@ -24,6 +25,17 @@ export default {
     // this.$refs.contactView.$el.removeEventListener("wheel", this.handleScroll);
   },
   methods: {
+    disableScroll() {
+      let disableScroll = function (e) {
+        e.preventDefault();
+      }
+      window.addEventListener('wheel', disableScroll, { passive: false });
+      document.addEventListener('wheel', disableScroll, { passive: false });
+      setTimeout(function () {
+        window.removeEventListener('wheel', disableScroll, { passive: false });
+        document.removeEventListener('wheel', disableScroll, { passive: false });
+      }, 800);
+    },
   triggerPulse() {
     if (this.pulseRunning) {
       return;
@@ -79,13 +91,13 @@ export default {
     <div class="nav" :class="{ pulse: showPulse }">
       <div class="box" :class="animationClasses"></div>
       <div class="top">
-        <a href="#home" @click="currentAnimation = 'moveUp';" class="nav-item "
+        <a href="#home" @click="currentAnimation = 'moveUp';disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveUp' ? 'text-white' : 'text-dark'">Home</a>
       </div>
       <div class="bottom">
-        <a href="#works" @click="currentAnimation = 'moveLeft';" class="nav-item "
+        <a href="#works" @click="currentAnimation = 'moveLeft';disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveLeft' ? 'text-white' : 'text-dark'">Works</a>
-        <a href="#contact" @click="currentAnimation = 'moveRight';" class="nav-item "
+        <a href="#contact" @click="currentAnimation = 'moveRight';disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveRight' ? 'text-white' : 'text-dark'">Contact</a>
       </div>
     </div>
@@ -97,6 +109,16 @@ export default {
 </template>
 
 <style lang="scss" >
+#app {
+  height: 100%;
+  overflow: hidden;
+  // overflow-y: hidden;
+  /* max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal; */
+}
 .nav {
   -webkit-touch-callout: none;
   // ... (All the other styles for .nav)
