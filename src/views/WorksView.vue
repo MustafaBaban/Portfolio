@@ -214,6 +214,7 @@ export default {
     overscroll-behavior-y: none;
     padding-right: 0;
     flex-basis: 50%;
+    padding-bottom:5rem;
 
 
     .title {
