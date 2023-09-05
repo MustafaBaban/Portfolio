@@ -52,7 +52,7 @@ export default {
 <template>
   <div class="right-page" id="contact">
     <loading v-if="loading" />
-    <p class="title ">Talk to me</p>
+    <p class="title ">Talk to me (Not you inbar)</p>
 
     <modal name="MessageStatus" v-if="modal.status" @close="modal.status = false">
       <!-- use slots for custom content -->
