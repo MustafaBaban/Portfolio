@@ -36,23 +36,23 @@ export default {
         document.removeEventListener('wheel', disableScroll, { passive: false });
       }, 800);
     },
-  triggerPulse() {
-    if (this.pulseRunning) {
-      return;
-    }
-    this.pulseRunning = true;
-    this.showPulse = true;
-    setTimeout(() => {
-      this.showPulse = false;
-      this.pulseRunning = false;
-    }, 3000);
-  },
+    triggerPulse() {
+      if (this.pulseRunning) {
+        return;
+      }
+      this.pulseRunning = true;
+      this.showPulse = true;
+      setTimeout(() => {
+        this.showPulse = false;
+        this.pulseRunning = false;
+      }, 3000);
+    },
     handleScroll(event) {
       const deltaY = event.deltaY;
       const scrollTop = this.$refs.worksView.$el.scrollTop;
 
       if (deltaY < 0 && scrollTop === 0) {
-        this.triggerPulse();  
+        this.triggerPulse();
       }
     },
     handleScrollHome(event) {
@@ -60,7 +60,7 @@ export default {
       const scrollTop = this.$refs.homeView.$el.scrollTop;
 
       if (deltaY < 0 && scrollTop === 0 || deltaY > 0 && scrollTop === 0) {
-        this.triggerPulse();  
+        this.triggerPulse();
       }
     },
     handleScrollContact(event) {
@@ -68,7 +68,7 @@ export default {
       const scrollTop = this.$refs.worksView.$el.scrollTop;
 
       if (deltaY < 0 && scrollTop === 0) {
-        this.triggerPulse();  
+        this.triggerPulse();
       }
     },
 
@@ -84,27 +84,26 @@ export default {
 }
 </script>
 <template>
-  
   <HomeView ref="homeView" />
 
   <div id="navBox">
     <div class="nav" :class="{ pulse: showPulse }">
       <div class="box" :class="animationClasses"></div>
       <div class="top">
-        <a href="#home" @click="currentAnimation = 'moveUp';disableScroll()" class="nav-item "
+        <a href="#home" @click="currentAnimation = 'moveUp'; disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveUp' ? 'text-white' : 'text-dark'">Home</a>
       </div>
       <div class="bottom">
-        <a href="#works" @click="currentAnimation = 'moveLeft';disableScroll()" class="nav-item "
+        <a href="#works" @click="currentAnimation = 'moveLeft'; disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveLeft' ? 'text-white' : 'text-dark'">Works</a>
-        <a href="#contact" @click="currentAnimation = 'moveRight';disableScroll()" class="nav-item "
+        <a href="#contact" @click="currentAnimation = 'moveRight'; disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveRight' ? 'text-white' : 'text-dark'">Contact</a>
       </div>
     </div>
   </div>
   <div class="bottom-pages">
     <WorksView ref="worksView" />
-    <ContactView ref="contactView"/>
+    <ContactView ref="contactView" />
   </div>
 </template>
 
@@ -119,6 +118,7 @@ export default {
 
   font-weight: normal; */
 }
+
 .nav {
   -webkit-touch-callout: none;
   // ... (All the other styles for .nav)
@@ -215,12 +215,12 @@ body {
   background-color: $accent;
   color: $white;
   /* text color */
-  border-radius: 2px;
+  border-radius: 3px;
   border: none;
   /* no border */
   padding: 8px 12px;
   /* space between text and the button's edge */
-  font-size: 24px;
+  font-size: 2em;
   /* font size */
   width: fit-content;
   cursor: pointer;
@@ -243,7 +243,7 @@ body {
   font-weight: 600;
   /* font weight */
   width: fit-content;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 
 }
 
@@ -329,6 +329,7 @@ body {
   scrollbar-width: none;
   /* Firefox */
 }
+
 #navBox {
   margin-right: 30px;
   margin-top: 30px;
@@ -394,9 +395,11 @@ body {
       @include breakpoint($xs) {
         font-size: 3em;
       }
+
       @include breakpoint($sm) {
         font-size: 3.5em;
       }
+
       @include breakpoint($md) {
         font-size: 4em;
       }
@@ -414,6 +417,7 @@ body {
       @include breakpoint($xs) {
         font-size: 1.3em;
       }
+
       @include breakpoint($md) {
         font-size: 2em;
       }
@@ -469,7 +473,4 @@ body {
     }
   }
 }
-
-
-
 </style>

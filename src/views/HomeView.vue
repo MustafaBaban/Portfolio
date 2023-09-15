@@ -1,10 +1,10 @@
 <script>
 export default {
   mounted() {
-    if(window.location.hash != "") {
+    if (window.location.hash != "") {
       const element = document.querySelector(window.location.hash)
       element.scrollIntoView()
-    }else{
+    } else {
       const element = document.querySelector("#home")
       element.scrollIntoView()
     }
@@ -27,8 +27,8 @@ export default {
           alert('Failed to copy text: ', error);
         });
     },
-  
-  
+
+
   },
 }
 </script>
@@ -48,7 +48,10 @@ export default {
           I aim to create digital experiences and solutions that are innovative, problem-focused, and valuable to the
           end user.
         </h1>
-        <a href="/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
+        <div class="buttons">
+          <a href="https://blog.mstfa.me" class="callToAction" style="text-decoration: none;">Blog</a>
+          <a href="/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
+        </div>
       </div>
       <div class="contact-icons-container">
         <a href="https://github.com/MustafaBaban" target="_blank">
@@ -74,6 +77,14 @@ export default {
   </div>
 </template>
 <style lang="scss">
+.buttons {
+  margin-block-start: 2em;
+
+  .callToAction {
+    margin-inline-end: 1em;
+  }
+}
+
 .border {
   margin-left: 50%;
   margin-right: 50px;

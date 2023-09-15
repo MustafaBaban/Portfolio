@@ -176,7 +176,7 @@ export default {
 </script>
 
 <template>
-    <div class="works" id="works" >
+    <div class="works" id="works">
         <p class="title">Works</p>
         <div class="work" v-for="work in works">
             <!-- <div class="work"> -->
@@ -196,9 +196,11 @@ export default {
 
                 <!-- umniah.netlify.app -->
                 <!-- https://akramiraq.netlify.app/ -->
-                <a class="callToSecondAction" style="text-decoration: none;margin-right:.5em" target="_blank" :href="work.url">Visit link</a>
-                
-                <button class="callToSecondAction" v-if="work.hasModal" @click="work.status = true" style="font-weight:bold;margin-top:.7em;">Learn More</button>
+                <a class="callToSecondAction" style="text-decoration: none;margin-right:.5em" target="_blank"
+                    :href="work.url">Visit link</a>
+
+                <button class="callToSecondAction" v-if="work.hasModal" @click="work.status = true"
+                    style="font-weight:bold;margin-top:.7em;">Learn More</button>
             </div>
         </div>
 
@@ -214,7 +216,7 @@ export default {
     overscroll-behavior-y: none;
     padding-right: 0;
     flex-basis: 50%;
-    padding-bottom:5rem;
+    padding-bottom: 5rem;
 
 
     .title {
@@ -222,7 +224,7 @@ export default {
         margin-left: 30px;
         margin-top: 30px;
         margin-bottom: 2em;
-        
+
         @include breakpoint($sm) {
             margin-bottom: 1em;
             font-size: 7em;
@@ -232,7 +234,7 @@ export default {
     .work {
         display: flex;
         border: solid rgb(105, 105, 105) 1px;
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         margin-bottom: 4em;
         overflow-x: hidden;
         flex-direction: column;
@@ -358,4 +360,5 @@ export default {
         }
 
     }
-}</style>
+}
+</style>

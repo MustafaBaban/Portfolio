@@ -15,7 +15,7 @@ const noise = () => {
       const len = buffer32.length;
   
       for (let i = 0; i < len; i++) {
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.3) {
           buffer32[i] = 0xff000000;
         }
       }
