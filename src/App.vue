@@ -83,6 +83,7 @@ export default {
 
 }
 </script>
+
 <template>
   <HomeView ref="homeView" />
 
@@ -93,7 +94,7 @@ export default {
         <a href="#home" @click="currentAnimation = 'moveUp'; disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveUp' ? 'text-white' : 'text-dark'">Home</a>
       </div>
-      <div class="bottom">
+      <div class="bottom" style="--div-width: 300px;">
         <a href="#works" @click="currentAnimation = 'moveLeft'; disableScroll()" class="nav-item "
           :class="currentAnimation == 'moveLeft' ? 'text-white' : 'text-dark'">Works</a>
         <a href="#contact" @click="currentAnimation = 'moveRight'; disableScroll()" class="nav-item "
@@ -107,7 +108,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 #app {
   height: 100%;
   overflow: hidden;
@@ -406,21 +407,31 @@ body {
     }
 
     .bottom {
-      font-size: 1.0em;
       display: flex;
       width: 100%;
       height: 50%;
       border: $black solid 2px;
       border-top-width: 0px;
       background-color: $white;
+      font-size: calc(var(--div-width) * 0.055);
+      /* Font-size at 3% of div width */
+      // font-size: 1.5em;
+      // font-size: clamp(16px, 2vw, 22px) !important;
+      // @include breakpoint($xs) {
+      //   font-size: 1.3em;
+      // }
 
-      @include breakpoint($xs) {
-        font-size: 1.3em;
-      }
+      // @include breakpoint($sm) {
+      //   font-size: 1.5em;
+      // }
 
-      @include breakpoint($md) {
-        font-size: 2em;
-      }
+      // @include breakpoint($md) {
+      //   font-size: 1.5em;
+      // }
+
+      // @include breakpoint($lg) {
+      //   font-size: 2em;
+      // }
 
       .nav-item:nth-child(1) {
         display: flex;
@@ -472,5 +483,50 @@ body {
       left: 50% !important;
     }
   }
+}
+
+.portfolio-container {
+  max-width: 800px;
+  margin: auto 1em;
+  line-height: 1.6;
+
+  // h1 {
+  //   font-size: 1.8em;
+  // }
+}
+
+.portfolio-title {
+  // text-align: center;
+  font-size: 2.5em;
+  margin: 1em auto;
+
+}
+
+.portfolio-section {
+  margin-bottom: 30px;
+  margin: 1em auto;
+  font-size: 1.5em;
+
+}
+
+.portfolio-section-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio-demo-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.screenshots {
+  img {
+    width: 100%;
+  }
+
+  display: flex;
+  flex-direction: column;
 }
 </style>

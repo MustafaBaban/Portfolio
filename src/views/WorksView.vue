@@ -14,67 +14,54 @@ export default {
     },
     data() {
         return {
-            //f
             works: [
                 {
                     status: false,
                     hasModal: true,
-                    title: 'Dynamic JSON Form Builder',
+                    title: 'FormVault',
                     category: 'Development',
-                    description: `In this project, I created a dynamic form builder using Laravel and Vue.js to
-                    provide
-                    an example of a solution I implemented in a real-world scenario. I
-                    initially developed this solution myself for a travel agency that used a SAP system, which
-                    required frequent updates to forms and backend routes.`,
-                    content: `<main>
-                        <section>
-                            <h2 class="DetailsTitle">Introduction</h2>
-                            <p class="DetailsText">
-                                In this project, I created a dynamic form builder using Laravel and Vue.js to provide
-                                an example of a solution I implemented in a real-world scenario. I
-                                initially developed this solution myself for a travel agency that used a SAP system, which
-                                required frequent updates to forms and backend routes.
-                            </p>
-                        </section>
+                    description: `Faced with constant SAP variable and endpoint updates that were bogging down the development team, I created a Vue.js-powered form builder integrated with a headless CMS. This solution put SAP form management directly in the hands of business users, significantly reducing development overhead, streamlining workflows, and improving data accuracy.`,
+                    content: `
+                    <div class="portfolio-container">
+         
+                    <section class="section demo row mb-4">
+                        <div class="col-md-12 text-center screenshots">
+                        
+                            <img  src="/screenshotFormVault2.PNG"
+                                alt="Form Builder Demo" class="img-fluid">
+                        </div>
+                    </section>
 
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>The Problem</h2>
+                            <p>The endless cycle of SAP variable updates and endpoint changes was overwhelming development teams, leading to costly bottlenecks and delays.</p>
+                        </div>
+                    </section>
 
-                        <section>
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>The Solution</h2>
+                            <p>I built a user-friendly, Vue-powered form creation tool integrated with a headless CMS. This allowed non-technical business teams to independently create and modify SAP forms.</p>
+                        </div>
+                    </section>
 
-                            <h2 class="DetailsTitle">How it Works</h2>
-                            <p class="DetailsText">
-                                The form builder allows users to create forms by defining a JSON schema for the fields,
-                                validation rules, and other components. This JSON file is then stored in the database, and
-                                the corresponding form can be generated dynamically on the frontend using Vue.js. Laravel
-                                serves as the backend, managing API routes and handling the storage of form data, and form schema data.
-                            </p>
-                            <!-- <img class="DetailsImage" src="/src/img/FormMaker1.PNG"
-                                alt="Step one of Making the form's parent" /> -->
-                            <img class="DetailsImage" src="/FormMaker2.PNG"
-                                alt="Step two of Making the form's parent" />
-                            <img class="DetailsImage" src="/FormMaker3.PNG"
-                                alt="Showing the final example of the created form" />
-                            <!-- <img class="DetailsImage" src="/src/img/FormMaker4.PNG"
-                                alt="Showing the post request of the form to the specified URL" />
-                            <img class="DetailsImage" src="/src/img/FormMaker5.PNG" alt="Form Json" /> -->
-                        </section>
-
-                        <section>
-                            <h2 class="DetailsTitle">Benefits and Outcomes</h2>
-                            <p class="DetailsText"> 
-
-                                This solution streamlines the process of creating and managing forms by the SAP team (Or any other), empowering them to
-                                work more efficiently and autonomously, especially because the original
-                                solution was with Strapi which is a headless framework, which allowed them to 
-                                create both the Forms and the new routes they need in a UI based way. It also reduces the need for constant updates from
-                                the development team, improving overall workflow and productivity.
-                                
-                            </p>
-                        </section>
-                    </main>
-
-                    <footer >
-                        <div style="font-size:4em">Thank you for Viewing</div>
-                    </footer>`,
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>Key Features</h2>
+                            <ul>
+                                <li>Flexible input options</li>
+                                <li>Custom validation methods</li>
+                                <li>CSS styling</li>
+                                <li>Nested forms</li>
+                            </ul>
+                            <div style="margin-top:1em;">
+                                <a class="callToSecondAction" style="text-decoration: none;" target="_blank"
+                                            href="https://formmaker.mstfa.me">DEMO</a>
+                                </div>
+                        </div>
+                    </section>
+                </div>`,
                     img: FormMaker,
                     url: "https://formmaker.mstfa.me"
                 },
@@ -135,17 +122,17 @@ export default {
                     img: akram,
                     url: "https://akramiraq.netlify.app/"
                 },
-                {
-                    status: false,
-                    hasModal: false,
-                    title: `Flower shop`,
-                    category: 'Design and Development',
-                    description: `This website showcases an elegant digital presence for a local flower shop.
-                     With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
-                    content: ``,
-                    img: umniah,
-                    url: "https://umniah.netlify.app/"
-                },
+                // {
+                //     status: false,
+                //     hasModal: false,
+                //     title: `Flower shop`,
+                //     category: 'Design and Development',
+                //     description: `This website showcases an elegant digital presence for a local flower shop.
+                //      With seamless user experience, the site highlights the shop's exquisite floral arrangements and services, inviting customers to explore and discover the perfect blooms for any occasion. `,
+                //     content: ``,
+                //     img: umniah,
+                //     url: "https://umniah.netlify.app/"
+                // },
                 {
                     status: false,
                     hasModal: false,
@@ -361,4 +348,12 @@ export default {
 
     }
 }
-</style>
+
+
+// body {
+//     font-family: Arial, sans-serif;
+//     margin: 0;
+//     padding: 20px;
+//     line-height: 1.6;
+//     color: #333;
+// }</style>
