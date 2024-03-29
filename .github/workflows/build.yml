@@ -29,3 +29,16 @@ jobs:
           publish_dir: ./dist
           publish_branch: build
           # test
+          
+      - name: Checkout the build branch
+        uses: actions/checkout@v3
+        with:
+          ref: build  # Replace 'build-branch' with the name of your build branch
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_DROPLET }}
+
+      - name: Copy website build to VPS
+        run: rsync -avz --delete . root@104.248.137.95:/var/www/html
