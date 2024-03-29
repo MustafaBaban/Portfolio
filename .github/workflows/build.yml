@@ -41,4 +41,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_DROPLET }}
 
       - name: Copy website build to VPS
-        run: rsync -avz --delete . root@104.248.137.95:/var/www/html
+        run: rsync -avz --delete . root@${{ env.VPS_IP }}:/var/www/html
