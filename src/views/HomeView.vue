@@ -46,7 +46,7 @@ export default {
       <div class="jumbo">
         <h1 class="header">
           I aim to create digital experiences and solutions that are innovative, problem-focused, and valuable to the
-          end user.
+          end user.B
         </h1>
         <div class="buttons">
           <a href="https://blog.mstfa.me" class="callToAction" style="text-decoration: none;">Blog</a>
