@@ -38,7 +38,7 @@ export default {
       <div class="heading">
         <div class="logo-box">
           <h1 class="logo">Mstfa Baban </h1>
-          <h2 class="sub-logo">Full Stack Developer / Designer</h2>
+          <h2 class="sub-logo">Front-end Developer / Designer</h2>
         </div>
       </div>
       <div>
@@ -89,14 +89,14 @@ export default {
   margin-left: 50%;
   margin-right: 50px;
   background: rgb(37, 37, 37);
-  padding: 15px;
+  padding: 10px;
   height: 100%;
   width: 100%;
   overflow: hidden;
   overflow-x: scroll;
 
   @include breakpoint($sm) {
-    padding: 30px;
+    padding: 15px;
   }
 
   .main-content {

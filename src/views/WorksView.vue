@@ -7,6 +7,7 @@ import prunus from '../img/prunus.png'
 import repeatedly from '../img/repeatedly.svg'
 import portfolio from '../img/portfolio.svg'
 import cfri from '../img/cfri.png'
+import kartei from '../img/kartei.png'
 
 export default {
     components: {
@@ -15,6 +16,56 @@ export default {
     data() {
         return {
             works: [
+                {
+                    status: false,
+                    hasModal: true,
+                    title: 'Kartei',
+                    category: 'Design and Development',
+                    description: `An app using Ionic Vue, to challenge myself with new frameworks. Kartei enables users to create or import saved translations from CSV or Google Translate and test their knowledge through a flashcard game that tracks progress. Initially built with a Laravel backend, switching to a Dexie database made it faster and more efficient, significantly improving the user experience.`,
+                    content: `
+                    <div class="portfolio-container">
+         
+                    <section class="section demo row mb-4">
+                        <div class="col-md-12 text-center screenshots">
+                        
+                            <img  src="/screenshotFormVault2.PNG"
+                                alt="Form Builder Demo" class="img-fluid">
+                        </div>
+                    </section>
+
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>The Problem</h2>
+                            <p>The endless cycle of SAP variable updates and endpoint changes was overwhelming development teams, leading to costly bottlenecks and delays.</p>
+                        </div>
+                    </section>
+
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>The Solution</h2>
+                            <p>I built a user-friendly, Vue-powered form creation tool integrated with a headless CMS. This allowed non-technical business teams to independently create and modify SAP forms.</p>
+                        </div>
+                    </section>
+
+                    <section class="portfolio-section"> 
+                        <div class="portfolio-section-content"> 
+                            <h2>Key Features</h2>
+                            <ul>
+                                <li>Flexible input options</li>
+                                <li>Custom validation methods</li>
+                                <li>CSS styling</li>
+                                <li>Nested forms</li>
+                            </ul>
+                            <div style="margin-top:1em;">
+                                <a class="callToSecondAction" style="text-decoration: none;" target="_blank"
+                                            href="https://formmaker.mstfa.co">DEMO</a>
+                                </div>
+                        </div>
+                    </section>
+                </div>`,
+                    img: kartei,
+                    url: "https://kartei.mstfa.co"
+                },
                 {
                     status: false,
                     hasModal: true,
@@ -183,7 +234,7 @@ export default {
 
                 <!-- umniah.netlify.app -->
                 <!-- https://akramiraq.netlify.app/ -->
-                <a class="callToSecondAction" style="text-decoration: none;margin-right:.5em" target="_blank"
+                <a class="callToAction" style="text-decoration: none;margin-right:.5em" target="_blank"
                     :href="work.url">Visit link</a>
 
                 <button class="callToSecondAction" v-if="work.hasModal" @click="work.status = true"
@@ -220,7 +271,8 @@ export default {
 
     .work {
         display: flex;
-        border: solid rgb(105, 105, 105) 1px;
+        border: solid rgb(197 197 197) 1px;
+        border-radius:3px;
         // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
         margin-bottom: 4em;
         overflow-x: hidden;
@@ -270,7 +322,9 @@ export default {
 
         p {
             font-size: 1.3em !important;
-
+            font-weight:500;
+            line-spacing:1.5;
+            letter-spacing:.05em;
             @include breakpoint($lg) {
                 font-size: 1.5em !important;
             }
@@ -287,6 +341,7 @@ export default {
             justify-content: center;
             width: 100%;
             height: 50%;
+            filter: grayscale(30%);
             overflow: hidden;
             // height: auto;
             // position: relative;
@@ -307,15 +362,19 @@ export default {
         }
 
         h3 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-bottom: 1em;
             opacity: .75;
+            font-weight:500;
+
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: .5em;
             line-height: 1.5em;
+            font-weight:700;
+
             // height: 3em;
             /* height is 2x line-height, so two lines will display */
             overflow: hidden;

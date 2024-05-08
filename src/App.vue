@@ -214,9 +214,9 @@ body {
 .callToAction {
   font-family: $font-main;
   background-color: $accent;
+  border-radius:3px;
   color: $white;
   /* text color */
-  border-radius: 3px;
   border: none;
   /* no border */
   padding: 8px 12px;
@@ -234,7 +234,6 @@ body {
   background-color: transparent;
   color: $black;
   /* text color */
-  border-radius: 1px;
   border: $accent solid 2px;
   /* no border */
   padding: 6px 10px;
@@ -245,6 +244,8 @@ body {
   /* font weight */
   width: fit-content;
   // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius:3px;
+
 
 }
 
@@ -342,7 +343,6 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
     position: fixed;
     z-index: 999;
     top: 30px;
@@ -385,13 +385,14 @@ body {
     .top {
       width: 100%;
       height: 50%;
-      border: $black solid 2px;
+      border: rgb(197, 197, 197) solid 2px;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
       background-color: $white;
       font-size: 2em;
+      border-radius:3px 3px 0 0  ;
 
       @include breakpoint($xs) {
         font-size: 3em;
@@ -410,8 +411,9 @@ body {
       display: flex;
       width: 100%;
       height: 50%;
-      border: $black solid 2px;
+      border: rgb(197, 197, 197) solid 2px;
       border-top-width: 0px;
+      border-radius: 0 0 3px 3px ;
       background-color: $white;
       font-size: calc(var(--div-width) * 0.055);
       /* Font-size at 3% of div width */
@@ -437,7 +439,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-right: $black solid 2px;
+       // border-right: rgb(197, 197, 197) solid 2px;
         height: 100%;
         width: 50%;
         font-weight: bold;
@@ -460,6 +462,7 @@ body {
       transform: translate(-1px, -1px);
       background-color: $black;
       transition: width 0.5s, top 0.5s, left 0.5s;
+      border-radius:2px;
     }
 
     .moveUp {
@@ -474,6 +477,8 @@ body {
       width: 50%;
       top: 50% !important;
       left: 0 !important;
+      //border-radius: 0 0 0 3px ;
+
     }
 
     .moveRight {
@@ -481,6 +486,8 @@ body {
       width: 50%;
       top: 50% !important;
       left: 50% !important;
+      //border-radius: 0 3px 3px 0 ;
+
     }
   }
 }
@@ -510,7 +517,7 @@ body {
 }
 
 .portfolio-section-content {
-  max-width: 600px;
+  //max-width: 600px;
   margin: 0 auto;
 }
 
