@@ -41,4 +41,4 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_DROPLET }}
 
       - name: Copy website build to VPS
-        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete . root@${{ secrets.VPS_IP }}:/var/www/html
+        run: rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete . root@${{ secrets.VPS_IP }}:/var/www/mstfa.co
