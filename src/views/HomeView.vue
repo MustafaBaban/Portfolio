@@ -49,7 +49,7 @@ export default {
           end user.
         </h1>
         <div class="buttons">
-          <a href="https://blog.mstfa.me" class="callToAction" style="text-decoration: none;">Blog</a>
+          <a href="https://blog.mstfa.co" class="callToAction" style="text-decoration: none;">Blog</a>
           <a href="/MustafaBabanResume.pdf" download class="callToSecondAction" style="text-decoration: none;">Resume</a>
         </div>
       </div>

@@ -57,13 +57,13 @@ export default {
                             </ul>
                             <div style="margin-top:1em;">
                                 <a class="callToSecondAction" style="text-decoration: none;" target="_blank"
-                                            href="https://formmaker.mstfa.me">DEMO</a>
+                                            href="https://formmaker.mstfa.co">DEMO</a>
                                 </div>
                         </div>
                     </section>
                 </div>`,
                     img: FormMaker,
-                    url: "https://formmaker.mstfa.me"
+                    url: "https://formmaker.mstfa.co"
                 },
                 {
                     status: false,

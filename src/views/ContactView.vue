@@ -72,9 +72,9 @@ export default {
 
     <div class="footer">
       <div class="name">
-        <!-- <div style="display:flex;cursor: pointer;" @click="copyText('mail@mstfa.me')"> -->
+        <!-- <div style="display:flex;cursor: pointer;" @click="copyText('mail@mstfa.co')"> -->
             <!-- <img src="../img/email.svg" style="margin-right:1em;" alt="">  -->
-            <h3 @click="copyText('mail@mstfa.me')" > mail@mstfa.me</h3>
+            <h3 @click="copyText('mail@mstfa.co')" > mail@mstfa.co</h3>
           <!-- </div> -->
         <h1>Mustafa Baban</h1>
       </div>
